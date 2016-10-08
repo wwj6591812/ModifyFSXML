@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<allocations>
+    <pool name="root">
+        <pool name="pool1">
+            <minResources>wwj</minResources>
+            <maxResources>987</maxResources>
+            <maxRunningApps>50</maxRunningApps>
+            <maxAMShare>400</maxAMShare>
+            <weight>2.0</weight>
+            <minSharePreemptionTimeout>1112</minSharePreemptionTimeout>
+            <fairSharePreemptionTimeout>111111</fairSharePreemptionTimeout>
+            <fairSharePreemptionThreshold>1114</fairSharePreemptionThreshold>
+            <schedulingMode>fair</schedulingMode>
+            <aclSubmitApps>pool1</aclSubmitApps>
+            <aclAdministerApps>pool1</aclAdministerApps>
+        </pool>
+        <pool name="pool2">
+            <pool name="pool2-1">
+                <minResources>60000mb,30vcores</minResources>
+                <maxResources>30000mb,200vcores</maxResources>
+                <maxRunningApps>10</maxRunningApps>
+                <maxAMShare>400</maxAMShare>
+                <weight>15.0</weight>
+                <minSharePreemptionTimeout>1112</minSharePreemptionTimeout>
+                <fairSharePreemptionTimeout>1113</fairSharePreemptionTimeout>
+                <fairSharePreemptionThreshold>1114</fairSharePreemptionThreshold>
+                <schedulingMode>fifo</schedulingMode>
+                <aclSubmitApps>qqq</aclSubmitApps>
+                <aclAdministerApps>ppp</aclAdministerApps>
+            </pool>
+            <pool name="pool2-2">
+                <pool name="pool2-2-1">
+                    <minResources>600mb,300vcores</minResources>
+                    <maxResources>100mb,1900vcores</maxResources>
+                    <maxRunningApps>40</maxRunningApps>
+                    <maxAMShare>400</maxAMShare>
+                    <weight>35.0</weight>
+                    <minSharePreemptionTimeout>1112</minSharePreemptionTimeout>
+                    <fairSharePreemptionTimeout>1113</fairSharePreemptionTimeout>
+                    <fairSharePreemptionThreshold>1114</fairSharePreemptionThreshold>
+                    <schedulingMode>fifo</schedulingMode>
+                    <aclSubmitApps>wwj</aclSubmitApps>
+                    <aclAdministerApps>wwj</aclAdministerApps>
+                </pool>
+                <minResources>60000mb,30vcores</minResources>
+                <maxResources>99999mb,30vcores</maxResources>
+                <maxRunningApps>99999</maxRunningApps>
+                <maxAMShare>12341111</maxAMShare>
+                <weight>122222</weight>
+                <minSharePreemptionTimeout>1111111</minSharePreemptionTimeout>
+                <fairSharePreemptionTimeout>12111111</fairSharePreemptionTimeout>
+                <fairSharePreemptionThreshold>12311111</fairSharePreemptionThreshold>
+                <schedulingMode>fifo</schedulingMode>
+                <aclSubmitApps>di</aclSubmitApps>
+                <aclAdministerApps>di</aclAdministerApps>
+            </pool>
+            <minResources>20000mb,10vcores</minResources>
+            <maxResources>999mb,99vcores</maxResources>
+            <maxRunningApps>40</maxRunningApps>
+            <weight>5.0</weight>
+            <fairSharePreemptionTimeout>987</fairSharePreemptionTimeout>
+            <schedulingMode>fifo</schedulingMode>
+            <aclSubmitApps>pool2</aclSubmitApps>
+            <aclAdministerApps>pool2</aclAdministerApps>
+        </pool>
+        <aclSubmitApps> </aclSubmitApps>
+        <aclAdministerApps> </aclAdministerApps>
+    </pool>
+    <user name="user1">
+        <maxRunningJobs>111</maxRunningJobs>
+    </user>
+    <user name="user2">
+        <maxRunningJobs>1</maxRunningJobs>
+    </user>
+    <user name="user3">
+        <maxRunningJobs>987</maxRunningJobs>
+    </user>
+    <user name="user4">
+        <maxRunningJobs>8888</maxRunningJobs>
+    </user>
+    <user name="wwwwj">
+        <maxRunningJobs>8888</maxRunningJobs>
+    </user>
+    <queueMaxAppsDefault>qqq</queueMaxAppsDefault>
+    <defaultMinSharePreemptionTimeout>qqq</defaultMinSharePreemptionTimeout>
+    <defaultPoolSchedulingMode>qqq</defaultPoolSchedulingMode>
+    <userMaxAppsDefault>qqq</userMaxAppsDefault>
+    <defaultFairSharePreemptionTimeout>qqq</defaultFairSharePreemptionTimeout>
+    <defaultFairSharePreemptionThreshold>qqq</defaultFairSharePreemptionThreshold>
+    <queueMaxAMShareDefault>qqq</queueMaxAMShareDefault>
+    <queuePlacementPolicy>
+        <rule name="specified" create="false"/>
+        <rule name="user" create="false"/>
+        <rule name="primaryGroup" create="false"/>
+        <rule name="default" queue="root.default"/>
+    </queuePlacementPolicy>
+</allocations>
